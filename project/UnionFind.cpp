@@ -33,7 +33,7 @@ void UnionFind::Union(int p, int q) {//Merge two components represented by eleme
         sz[i] += sz[j];
     }
 }
-int UnionFind::Find(int p) { //Find the component identifier of element p. //Find the root
+int UnionFind::Find(int p) const {  //Find the component identifier of element p. //Find the root
     int i = 0;
     //compress trees when nodes are touched
     for (i = p; i != id[i]; i = id[i])
